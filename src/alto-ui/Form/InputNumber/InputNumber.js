@@ -10,7 +10,7 @@ import { parse, format } from '../../helpers/number';
 
 import './InputNumber.scss';
 
-class InputNumber extends React.Component {
+export class InputNumber extends React.Component {
   constructor(props) {
     super(props);
 
