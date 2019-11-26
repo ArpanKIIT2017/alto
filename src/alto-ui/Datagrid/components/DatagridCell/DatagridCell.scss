@@ -9,15 +9,6 @@
   border-bottom: 1px solid $coolgrey-20;
   background-color: $white;
 
-  .DatagridRow--clickable:hover & {
-    transition: background-color $transition;
-    background-color: $blue-10;
-
-    &--selected {
-      background-color: $blue-20;
-    }
-  }
-
   &--detached {
     border-top: 1px solid $coolgrey-20;
   }
