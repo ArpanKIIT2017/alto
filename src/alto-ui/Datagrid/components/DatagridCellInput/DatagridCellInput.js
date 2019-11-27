@@ -18,15 +18,7 @@ const ENTER_KEY_CODE = 13;
 const ESC_KEY_CODE = 27;
 
 const DatagridCellInput = props => {
-  const {
-    editing,
-    modifiers,
-    onChange,
-    onStopEditing,
-    onStartEditing,
-    value,
-    type,
-  } = props;
+  const { editing, modifiers, onChange, onStopEditing, onStartEditing, value, type } = props;
   const inputRef = useRef();
 
   useEffect(() => {
@@ -111,9 +103,6 @@ DatagridCellInput.propTypes = {
   onStartEditing: PropTypes.func.isRequired,
   modifiers: PropTypes.object.isRequired,
   id: PropTypes.string.isRequired,
-  context: PropTypes.shape({
-    locale: PropTypes.string.isRequired,
-  }).isRequired,
   column: PropTypes.shape({
     precision: PropTypes.number,
     disableThousandSeparator: PropTypes.bool,

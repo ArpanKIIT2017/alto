@@ -148,4 +148,6 @@ DatagridHead.propTypes = {
   onChangeWidth: PropTypes.func,
 };
 
-export default forwardRef(({ ...props }, ref) => <DatagridHead {...props} scrollHeaderRef={ref} />);
+export default forwardRef(({ ...props }, { scrollHeaderRef, containerRef }) => (
+  <DatagridHead {...props} scrollHeaderRef={scrollHeaderRef} containerRef={containerRef} />
+));

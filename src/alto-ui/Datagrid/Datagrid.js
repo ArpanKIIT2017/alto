@@ -17,13 +17,7 @@ import DatagridContent from './components/DatagridContent';
 
 const IS_MAC_OS = isMacOSHelper();
 
-export const DatagridContext = React.createContext({
-  renderers: RENDERERS,
-  parsers: PARSERS,
-  formatters: FORMATTERS,
-  labels: DEFAULT_LABELS,
-  columnsWidth: {},
-});
+export const DatagridContext = React.createContext({});
 
 DatagridContext.displayName = 'DataGridContext';
 
@@ -129,7 +123,7 @@ export default function Datagrid({
       locale,
       modifiers,
       onChange,
-      onChangeDebounceTime,
+      debounceTime: onChangeDebounceTime,
       onClickCellDropdownItem,
       onRowClick,
       onSelectAllRows,
@@ -164,7 +158,7 @@ export default function Datagrid({
         rowsWidth={rowsWidth}
         id={id}
         horizontalScrollPosition={horizontalScrollPosition}
-        containerRef={containerRef}
+        ref={{ scrollHeaderRef, containerRef }}
         columnsWidth={columnsWidth}
         setColumnsWidth={setColumnsWidth}
         onChangeWidth={onChangeWidth}

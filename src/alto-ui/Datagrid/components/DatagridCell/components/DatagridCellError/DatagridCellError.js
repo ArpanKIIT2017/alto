@@ -29,7 +29,7 @@ DatagridCellError.propTypes = {
     formatter: PropTypes.func,
   }),
   row: PropTypes.object,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  value: PropTypes.any,
   showError: PropTypes.func,
   isWarningError: PropTypes.func,
   replaceRowValues: PropTypes.func,
